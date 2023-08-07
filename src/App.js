@@ -1,9 +1,11 @@
+import { Box } from "@mui/material";
+import Navbar from "./components/Navbar.jsx";
 
 function App() {
   return (
-    <div className="App">
-      Hello World
-    </div>
+   <Box>
+    <Navbar />
+   </Box>
   );
 }
 
