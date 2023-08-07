@@ -20,6 +20,7 @@ const Sidebar = () => {
   return (
     <Box flex={1} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
       {/* home page */}
+      <Box position='fixed'>
       <List>
         <ListItem disablePadding>
           <ListItemButton LinkComponent="a" href="#home">
@@ -75,6 +76,7 @@ const Sidebar = () => {
           </ListItemButton>
         </ListItem>
       </List>
+      </Box>
     </Box>
   );
 };
