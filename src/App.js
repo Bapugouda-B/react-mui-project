@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar.js";
 import Sidebar from "./components/Sidebar.js";
 import Updates from "./components/Updates.js";
 import Rightbar from "./components/Rightbar.js";
+import Addpost from "./components/Addpost.js";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Updates />
         <Rightbar />
       </Stack>
+      <Addpost />
     </Box>
   );
 }
