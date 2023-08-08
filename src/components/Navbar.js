@@ -50,12 +50,13 @@ const UserBox = styled(Box)(({ theme }) => ({
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+
   return (
     <AppBar position="sticky">
       {/* Top toolbar with app title and search */}
       <StyledToolbar>
         <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
-          Bapu Rajj
+          Bapu
         </Typography>
         {/* Yard icon for smaller screens */}
         <Yard sx={{ display: { xs: "block", sm: "none" } }} />

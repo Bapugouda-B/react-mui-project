@@ -22,12 +22,14 @@ import {
 } from "@mui/material";
 import React, { useState } from "react";
 
+// Creating a styled Modal component using emotion
 const MyModal = styled(Modal)({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
 });
 
+// Creating a styled Box (Container) for user information
 const UserBox = styled(Box)({
   display: "flex",
   alignItems: "center",
@@ -36,10 +38,12 @@ const UserBox = styled(Box)({
 });
 
 const Addpost = () => {
+  // Using state to control the visibility of the modal
   const [open, setOpen] = useState(false);
 
   return (
     <>
+      {/* Tooltip with a Fab button to open the modal */}
       <Tooltip
         onClick={(event) => setOpen(true)}
         title="Delete"
@@ -53,16 +57,26 @@ const Addpost = () => {
           <AddIcon />
         </Fab>
       </Tooltip>
+      {/* Custom styled Modal */}
       <MyModal
         open={open}
         onClose={(event) => setOpen(false)}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box width={400} height={280} bgcolor="white" p={3} borderRadius={5}>
+        {/* Container for the modal content */}
+        <Box
+          width={400}
+          height={280}
+          bgcolor={"background.default"}
+          color={"text.primary"}
+          p={3}
+          borderRadius={5}
+        >
           <Typography variant="h6" color="gray" textAlign="center">
             Add post
           </Typography>
+          {/* User information display */}
           <UserBox>
             <Avatar src="/myimage.jpg" sx={{ width: 35, height: 35 }} />
             <Typography fontWeight={500} variant="span">
@@ -77,6 +91,7 @@ const Addpost = () => {
             placeholder="Enter your quote here..."
             variant="standard"
           />
+          {/* Stack of icons */}
           <Stack direction="row" gap={2} mt={2} mb={3}>
             <Mood color="warning" />
             <VideoCall color="primary" />
@@ -84,13 +99,14 @@ const Addpost = () => {
             <Image color="secondary" />
             <Share color="success" />
           </Stack>
+          {/* Button group for posting and adding a date */}
           <ButtonGroup
-          fullWidth
+            fullWidth
             variant="contained"
             aria-label="Outlined primary button group"
           >
             <Button>Post</Button>
-            <Button sx={{width:"100px"}}>
+            <Button sx={{ width: "100px" }}>
               <DateRange />
             </Button>
           </ButtonGroup>
